@@ -1,5 +1,10 @@
 const MoviesPage = () => {
-  return <div>Movies page</div>;
+  return (
+    <div>
+      <input />
+      <button type="submit">Search</button>
+    </div>
+  );
 };
 
 export default MoviesPage;

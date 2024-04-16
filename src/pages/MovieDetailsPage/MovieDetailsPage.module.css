@@ -14,3 +14,31 @@
 .genres {
   padding-left: 40px;
 }
+
+.infa {
+  margin-top: 20px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  width: 1400px;
+}
+
+.list {
+  padding-left: 50px;
+}
+.back {
+  display: flex;
+  width: 70px;
+  height: 20px;
+  position: relative;
+  padding-left: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgb(165, 166, 166);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}

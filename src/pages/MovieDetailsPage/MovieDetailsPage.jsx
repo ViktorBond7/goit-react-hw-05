@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, Outlet, useParams } from "react-router-dom";
 import getMovies, { getMoviesByid } from "../../service/movieApi";
 import css from "./MovieDetailsPage.module.css";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
@@ -28,6 +29,10 @@ const MovieDetailsPage = () => {
   // console.log(movie);
   return (
     <div>
+      <Link to="/" className={css.back}>
+        <IoIosArrowRoundBack className={css.icon} />
+        Go Back
+      </Link>
       {movie && (
         <div>
           <div className={css.container}>
@@ -53,9 +58,9 @@ const MovieDetailsPage = () => {
               </ul>
             </div>
           </div>
-          <div>
+          <div className={css.infa}>
             <p>Additional information</p>
-            <ul>
+            <ul className={css.list}>
               <li>
                 <Link to="movieCast">Cast</Link>
               </li>
@@ -71,75 +76,4 @@ const MovieDetailsPage = () => {
   );
 };
 
-// {
-//     "adult": false,
-//     "backdrop_path": "/j3Z3XktmWB1VhsS8iXNcrR86PXi.jpg",
-//     "belongs_to_collection": null,
-//     "budget": 140956385,
-//     "genres": [
-//         {
-//             "id": 28,
-//             "name": "Action"
-//         },
-//         {
-//             "id": 878,
-//             "name": "Science Fiction"
-//         },
-//         {
-//             "id": 12,
-//             "name": "Adventure"
-//         },
-//         {
-//             "id": 14,
-//             "name": "Fantasy"
-//         }
-//     ],
-//     "homepage": "https://www.godzillaxkongmovie.com",
-//     "id": 823464,
-//     "imdb_id": "tt14539740",
-//     "origin_country": [
-//         "US"
-//     ],
-//     "original_language": "en",
-//     "original_title": "Godzilla x Kong: The New Empire",
-//     "overview": "Following their explosive showdown, Godzilla and Kong must reunite against a colossal undiscovered threat hidden within our world, challenging their very existence – and our own.",
-//     "popularity": 2405.98,
-//     "poster_path": "/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg",
-//     "production_companies": [
-//         {
-//             "id": 923,
-//             "logo_path": "/8M99Dkt23MjQMTTWukq4m5XsEuo.png",
-//             "name": "Legendary Pictures",
-//             "origin_country": "US"
-//         },
-//         {
-//             "id": 174,
-//             "logo_path": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
-//             "name": "Warner Bros. Pictures",
-//             "origin_country": "US"
-//         }
-//     ],
-//     "production_countries": [
-//         {
-//             "iso_3166_1": "US",
-//             "name": "United States of America"
-//         }
-//     ],
-//     "release_date": "2024-03-27",
-//     "revenue": 436305986,
-//     "runtime": 115,
-//     "spoken_languages": [
-//         {
-//             "english_name": "English",
-//             "iso_639_1": "en",
-//             "name": "English"
-//         }
-//     ],
-//     "status": "Released",
-//     "tagline": "Rise together or fall alone.",
-//     "title": "Godzilla x Kong: The New Empire",
-//     "video": false,
-//     "vote_average": 6.7,
-//     "vote_count": 611
-// }
 export default MovieDetailsPage;

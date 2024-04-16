@@ -1,0 +1,16 @@
+.img {
+  width: 200px;
+  padding-left: 50px;
+}
+
+.container {
+  display: flex;
+}
+
+.title {
+  padding-left: 20px;
+}
+
+.genres {
+  padding-left: 40px;
+}

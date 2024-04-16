@@ -8,14 +8,16 @@ const buildLinkClass = ({ isActive }) => {
 
 const Navbar = () => {
   return (
-    <nav className={css.nav}>
-      <NavLink to="/" className={buildLinkClass}>
-        Home
-      </NavLink>
-      <NavLink to="/movies" className={buildLinkClass}>
-        Movies
-      </NavLink>
-    </nav>
+    <div className={css.container}>
+      <nav className={css.nav}>
+        <NavLink to="/" className={buildLinkClass}>
+          Home
+        </NavLink>
+        <NavLink to="/movies" className={buildLinkClass}>
+          Movies
+        </NavLink>
+      </nav>
+    </div>
   );
 };
 export default Navbar;

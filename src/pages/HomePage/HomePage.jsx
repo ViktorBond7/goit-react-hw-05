@@ -23,7 +23,6 @@ const HomePage = () => {
         // setPatch(imageUrl);
         // console.log(moviesData);
         setMovies(movies);
-        // console.log(path);
       } catch (error) {
         setError(true);
       } finally {
@@ -32,9 +31,6 @@ const HomePage = () => {
     };
     fetchData();
   }, []);
-
-  // console.log(movies);
-  // console.log(path);
 
   return (
     <div>

@@ -1,6 +1,7 @@
 .img {
+  margin-left: 50px;
   width: 200px;
-  padding-left: 50px;
+  height: 100%;
 }
 
 .container {
@@ -27,7 +28,7 @@
 }
 .back {
   display: flex;
-  width: 70px;
+  width: 80px;
   height: 20px;
   position: relative;
   padding-left: 20px;
@@ -35,6 +36,7 @@
   box-shadow: 2px 2px 5px rgb(165, 166, 166);
   border-radius: 5px;
   margin-bottom: 10px;
+  font-size: 12px;
 }
 
 .icon {

@@ -32,7 +32,7 @@ const Cast = () => {
   }, [movieId]);
 
   return (
-    <div>
+    <div className={css.ssss}>
       {loader && <Loader />}
       <ul className={css.container}>
         {movieCasts.map((movieCast) => (
@@ -46,7 +46,9 @@ const Cast = () => {
               width={250}
               alt="poster"
             />
-            <p>{movieCast.original_name}</p>
+            <div className={css.title}>
+              <p>{movieCast.original_name}</p>
+            </div>
           </li>
         ))}
       </ul>

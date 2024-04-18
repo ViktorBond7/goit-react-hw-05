@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, Outlet, useLocation, useParams } from "react-router-dom";
-import getMovies, { getMoviesByid } from "../../service/movieApi";
+import { getMoviesByid } from "../../service/movieApi";
 import css from "./MovieDetailsPage.module.css";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import Error from "../../components/ErrorMessage/ErrorMessege";
@@ -13,10 +13,9 @@ const MovieDetailsPage = () => {
   const location = useLocation();
   const backLink = useRef(location.state?.from ?? "/");
 
-  // const [path, setPatch] = useState("");
   const { movieId } = useParams();
   const defaultImg =
-    "<https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg>";
+    "https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg";
 
   useEffect(() => {
     if (!movieId) return;
@@ -25,11 +24,6 @@ const MovieDetailsPage = () => {
     const fetchData = async () => {
       try {
         const fechedMovie = await getMoviesByid(movieId);
-        // const { url } = await getMovies();
-        // console.log(url);
-        // const { base_url } = url;
-        // const imageUrl = `${base_url}/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg`;
-        // setPatch(imageUrl);
         setMovie(fechedMovie);
       } catch (error) {
         setError(true);

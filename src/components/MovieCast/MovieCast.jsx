@@ -35,22 +35,26 @@ const Cast = () => {
     <div className={css.ssss}>
       {loader && <Loader />}
       <ul className={css.container}>
-        {movieCasts.map((movieCast) => (
-          <li className={css.list} key={movieCast.id}>
-            <img
-              src={
-                movieCast.profile_path
-                  ? `https://image.tmdb.org/t/p/w500${movieCast.profile_path}`
-                  : defaultImg
-              }
-              width={250}
-              alt="poster"
-            />
-            <div className={css.title}>
-              <p>{movieCast.original_name}</p>
-            </div>
-          </li>
-        ))}
+        {movieCasts.length > 0 ? (
+          movieCasts.map((movieCast) => (
+            <li className={css.list} key={movieCast.id}>
+              <img
+                src={
+                  movieCast.profile_path
+                    ? `https://image.tmdb.org/t/p/w500${movieCast.profile_path}`
+                    : defaultImg
+                }
+                width={250}
+                alt="poster"
+              />
+              <div className={css.title}>
+                <p>{movieCast.original_name}</p>
+              </div>
+            </li>
+          ))
+        ) : (
+          <p>We don't have any images fot this movie</p>
+        )}
       </ul>
       {error && <Error />}
     </div>

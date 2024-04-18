@@ -71,10 +71,10 @@ const MovieDetailsPage = () => {
             <p>Additional information</p>
             <ul className={css.list}>
               <li>
-                <Link to="movieCast">Cast</Link>
+                <Link to="cast">Cast</Link>
               </li>
               <li>
-                <Link to="movieReviews">Reviews</Link>
+                <Link to="reviews">Reviews</Link>
               </li>
             </ul>
           </div>

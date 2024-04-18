@@ -5,7 +5,7 @@ import Error from "../ErrorMessage/ErrorMessege";
 import Loader from "../Loader/Loader";
 
 const Reviews = () => {
-  const [movieReviews, setMovieReviews] = useState(null);
+  const [movieReviews, setMovieReviews] = useState([]);
   const [error, setError] = useState(false);
   const [loader, setLoader] = useState(false);
   const { movieId } = useParams();
@@ -31,7 +31,7 @@ const Reviews = () => {
     <div>
       {error && <Error />}
       <ul>
-        {movieReviews ? (
+        {movieReviews.length ? (
           movieReviews.map((movieReview) => (
             <li key={movieReview.id}>
               <h3>{movieReview.author}</h3>

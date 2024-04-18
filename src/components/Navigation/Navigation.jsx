@@ -6,7 +6,7 @@ const buildLinkClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.active);
 };
 
-const Navbar = () => {
+const Navigation = () => {
   return (
     <div className={css.container}>
       <nav className={css.nav}>
@@ -20,4 +20,4 @@ const Navbar = () => {
     </div>
   );
 };
-export default Navbar;
+export default Navigation;
